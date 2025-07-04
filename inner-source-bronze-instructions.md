@@ -34,9 +34,9 @@ The following instructions are designed to ensure your repository is compliant w
 
 6. SonarQube
     - Ensure the project is configured to use SonarQube for code quality analysis.
-    - Include a `sonar-project.properties` file in the root directory with the necessary configuration. Ask the user for the SonarQube project key and other relevant details.
-    - Include a link to the SonarQube dashboard in the `README.md` file.
-    - Ensure that the SonarQube analysis is run as part of the CI/CD pipeline. Add it to the CI/CD configuration file (e.g., `.github/workflows/ci.yml` for GitHub Actions, `azure-pipelines.yml` for Azure DevOps, etc.).
+    - Include a `sonar-project.properties` file in the root directory with the necessary configuration that matches the requirements of the reopository and remove sections not needed. Ask the user for the SonarQube project key and other relevant details and populate them accordingly in the file.
+    - Include a link to the SonarQube dashboard in the `README.md` file and add a badge to the README that shows the current quality gate status.
+    - Ensure that the SonarQube analysis is run as part of the CI/CD pipeline. If the existing Github Actions workflows do not already run sonarqube scans, add the [SonarQube Github Action](templates/build.yml) to the `.github/workflows` directory.
 
 7 Issue Template
     - Ensure the repository has an issue template for bug reports and feature requests.
