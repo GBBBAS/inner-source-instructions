@@ -18,12 +18,11 @@ The following instructions are designed to ensure your repository is compliant w
 
 4. Contribution
     - Include a `CONTRIBUTION.md` file in the root directory.
-    - Use the template from [CONTRIBUTION](/templates/CONTRIBUTION.md)
-        - Populate the template with the following sections:
-            - Contribution Overview
-            - Contribution Model - provide a high-level contribution process and steps for contributing
-            - Moderation and Maintainer - use the PR Approvers to populate this list if maintainers are not yet defined
-            - Quality Management details
+    - Use the template from [CONTRIBUTION](/templates/CONTRIBUTION.md). Populate the template with the following sections:
+        - Contribution Overview
+        - Contribution Model - provide a high-level contribution process and steps for contributing
+        - Moderation and Maintainer - use the PR Approvers to populate this list if maintainers are not yet defined. If that is not available get the list of committers to the main branch using the command `git log main --pretty=format:"%an <%ae>" | sort | uniq`. 
+        - Quality Management details
 
 5. Folder structure
     - Ensure the following folder structure is present:
@@ -38,7 +37,7 @@ The following instructions are designed to ensure your repository is compliant w
     - Include a link to the SonarQube dashboard in the `README.md` file and add a badge to the README that shows the current quality gate status.
     - Ensure that the SonarQube analysis is run as part of the CI/CD pipeline. If the existing Github Actions workflows do not already run sonarqube scans, add the [SonarQube Github Action](templates/build.yml) to the `.github/workflows` directory.
 
-7 Issue Template
+7. Issue Template
     - Ensure the repository has an issue template for bug reports and feature requests.
     - Use the template from [ISSUE_TEMPLATE](/templates/issue_template.yml) if the repository does not have an issue template and place it in the `.github/ISSUE_TEMPLATE` directory.
 
